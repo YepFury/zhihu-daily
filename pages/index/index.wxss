@@ -1,0 +1,61 @@
+.scroll-container {
+  height: 100%;
+}
+
+swiper {
+  height: 400rpx;
+}
+
+swiper .slide-item {
+  height: 100%;
+  width: 100%;
+}
+
+.slide-image {
+  height: 100%;
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.nav-item {
+  width: calc(25% - 1px);
+  font-size: 28rpx;
+  text-align: center;
+  padding: 14rpx 0;
+  border-right: 1px dotted #efefef;
+  border-bottom: 1px dotted #efefef;
+}
+
+.nav-item:nth-child(4n) {
+  border-right: 0;
+}
+
+.nav-item:nth-child(n+9) {
+  border-bottom: 0;
+}
+
+.nav-item image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.nav-item text {
+  display: block;
+  text-align: center;
+}
+
+
+.card-container .title {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #666;
+}

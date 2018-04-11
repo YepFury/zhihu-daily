@@ -1,0 +1,45 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+page {
+  background-color: #ececec;
+}
+
+image {
+  border: 0;
+  margin: 0;
+}
+
+.card-container {
+  padding: 0 20rpx;
+}
+
+.card {
+  font-size: 38rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 4rpx 4rpx rgba(0, 0, 0, 0.2);
+  margin-bottom: 20rpx;
+  padding: 30rpx;
+  display: flex;
+  background-color: #fff;
+  min-height: 80rpx;
+}
+
+.card text {
+  flex: 3;
+}
+
+.card image {
+  flex: 1;
+  height: 140rpx;
+  margin-left: 20rpx;
+}

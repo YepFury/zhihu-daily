@@ -1,0 +1,49 @@
+<!--pages/comments/comments.wxml-->
+<view class="title">{{short}} 条短评</view>
+<view class="short-item" wx:for="{{shortList}}" wx:for-item="shortItem" wx:key="shortItem.id">
+  <view class="avatar">
+    <image src="{{shortItem.avatar}}" />
+  </view>
+  <view class="main">
+    <view class="author">
+      <text>{{shortItem.author}}</text>
+      <view class="likes" id="{{(shortItem.id)}}" data-liked="{{shortItem.isLiked}}">
+        <image wx:if="{{shortItem.isLiked}}" src="{{likedImg}}" />
+        <image wx:else src="{{likeImg}}" /> {{shortItem.likes}}
+      </view>
+    </view>
+    <view class="content">
+      <text>{{shortItem.content}}</text>
+      <view wx:if="{{shortItem.reply_to}}" class="replay">
+        <text class="author2">//{{shortItem.reply_to.author}}</text>:
+        <text>{{shortItem.reply_to.content}}</text>
+      </view>
+      <view class="time">{{shortItem.time}}</view>
+      <view wx:if="{{shortItem.reply_to}}" class="open" bindtap="showMore">展开</view>
+    </view>
+  </view>
+</view>
+<view class="title">{{long}} 条长评</view>
+<view class="short-item" wx:for="{{longList}}" wx:for-item="longItem" wx:key="longItem.id">
+  <view class="avatar">
+    <image src="{{longItem.avatar}}" />
+  </view>
+  <view class="main">
+    <view class="author">
+      <text>{{longItem.author}}</text>
+      <view class="likes" id="{{(longItem.id)}}" data-liked="{{longItem.isLiked}}">
+        <image wx:if="{{longItem.isLiked}}" src="{{likedImg}}" />
+        <image wx:else src="{{likeImg}}" /> {{longItem.likes}}
+      </view>
+    </view>
+    <view class="content">
+      <text>{{longItem.content}}</text>
+      <view wx:if="{{longItem.reply_to}}" class="replay">
+        <text class="author2">//{{longItem.reply_to.author}}</text>:
+        <text>{{longItem.reply_to.content}}</text>
+      </view>
+      <view class="time">{{longItem.time}}</view>
+      <view wx:if="{{longItem.reply_to}}" class="open" bindtap="showMore">展开</view>
+    </view>
+  </view>
+</view>

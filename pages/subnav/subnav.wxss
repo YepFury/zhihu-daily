@@ -1,0 +1,54 @@
+.scroll-container {
+  height: 100%;
+}
+
+.post {
+  height: 400rpx;
+  width: 100%;
+}
+
+.description {
+  position: absolute;
+  top: 250rpx;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 40rpx;
+  padding: 0 30rpx;
+}
+
+.editor {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #666;
+  padding: 0 30rpx;
+}
+
+.editor image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: -20rpx;
+  margin-left: 15rpx;
+}
+
+.editor-list {
+  padding: 0 105rpx;
+}
+
+.list {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #666;
+  display: block;
+}
+
+.editor-list image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: -20rpx;
+  margin-right: 15rpx;
+}

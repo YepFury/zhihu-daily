@@ -1,0 +1,22 @@
+<scroll-view scroll-y class="scroll-container" bindscrolltolower="getBeforeData">
+  <swiper indicator-dots="true" circular="true" indicator-active-color="#ffffff" autoplay="true" interval="3000" duration="800">
+    <block wx:for="{{swiperLists}}" wx:for-item="sItem" wx:key="{{sItem.id}}">
+      <swiper-item class="slide-item">
+        <image src="{{sItem.images[0]}}" id="{{sItem.id}}" class="slide-image" bindtap='getDetail' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="nav">
+    <view class="nav-item" wx:for="{{navLists}}" wx:for-item="nav" wx:key="{{nav.id}}" bindtap="navClick" id="{{nav.id}}">
+      <image src="{{nav.miniLogo}}" />
+      <text>{{nav.name}}</text>
+    </view>
+  </view>
+  <view class='card-container' wx:for="{{dataLists}}" wx:for-item="dataObj" wx:key="index">
+    <view class='title'>{{dataObj.title}}</view>
+    <view bindtap='getDetail' id='{{item.id}}' class='card' wx:for="{{dataObj.data}}" wx:for-item="item" wx:key="{{item.id}}">
+      <text>{{item.title}}</text>
+      <image src='{{item.images[0]}}' />
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,92 @@
+/* pages/detail/detail.wxss */
+@import "../../wxParse/wxparse.wxss";
+
+page {
+  background-color: #fff;
+}
+
+.post-content {
+  position: relative;
+  height: 400rpx;
+  width: 100%;
+  overflow: hidden;
+}
+
+.post {
+  height: 100%;
+  width: 100%;
+}
+
+.post-content .title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150rpx;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+
+.post-content text {
+  position: absolute;
+  right: 20rpx;
+  bottom: 10rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.icon image {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0;
+  border: 0;
+}
+
+.tab-bottom {
+  height: 90rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.tab-bottom .input {
+  flex: 4;
+  height: 60rpx;
+  border-radius: 30rpx;
+  background-color: #efefef;
+  border: 1px solid #dfdfdf;
+  padding: 0 30rpx;
+  font-size: 26rpx;
+  margin-top: 14rpx;
+  margin-left: 14rpx;
+}
+
+.place {
+  font-size: 26rpx;
+}
+
+.tab-bottom .icon {
+  flex: 1;
+  padding-top: 14rpx; 
+  text-align: center;
+  position: relative;
+}
+
+.icon view {
+  width: 40rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 24rpx;
+  position: absolute;
+  right: 6rpx;
+  top: 4rpx;
+  color: #fff;
+  background-color: #00a2ed;
+  border-radius: 14rpx;
+}

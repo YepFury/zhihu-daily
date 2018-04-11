@@ -1,0 +1,20 @@
+<scroll-view scroll-y class="scroll-container">
+  <image class="post" src="{{postImg}}" />
+  <text class="description">{{description}}</text>
+  <view class="editor" bindtap="showList">
+    <text>主编</text>
+    <image wx:for="{{editors}}" wx:for-item="editor" wx:key="{{editor.id}}" src="{{editor.avatar}}" />
+  </view>
+  <view class="editor-list" wx:if="{{showEditotList}}">
+    <view class="list"  wx:for="{{editors}}" wx:for-item="editor" wx:key="{{editor.id}}">
+      <image src="{{editor.avatar}}" />
+      <text>{{editor.bio}}</text>
+    </view>
+  </view>
+  <view class="card-container">
+    <view bindtap='getDetail' id='{{article.id}}' class='card' wx:for="{{articleLists}}" wx:for-item="article" wx:key="{{article.id}}">
+      <text>{{article.title}}</text>
+      <image wx:if="{{article.images}}" src='{{article.images[0]}}' />
+    </view>
+  </view>
+</scroll-view>

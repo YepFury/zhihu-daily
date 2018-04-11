@@ -1,0 +1,24 @@
+<!--pages/detail/detail.wxml-->
+<import src="../../wxParse/wxparse.wxml" />
+<view class='post-content'>
+  <image class='post' src="{{postImg}}" />
+  <view class='title'>{{title}}</view>
+  <text>{{imgSource}}</text>
+</view>
+<view class='wxParse'>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+<view class="tab-bottom">
+  <input type="text" placeholder="写评论..." placeholder-class="place" class="input"></input>
+  <view class="icon">
+    <image src="../../images/brush.png" />
+  </view>
+  <view class="icon like" bindtap="onLiked">
+    <image src="{{likeImg}}" />
+    <view>{{like}}</view>
+  </view>
+  <view id="{{id}}" data-long="{{long}}" data-short="{{short}}" class="icon comments" bindtap="scanComments">
+    <image src="../../images/message.png" />
+    <view>{{comments}}</view>
+  </view>
+</view>
